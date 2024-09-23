@@ -1,0 +1,17 @@
+{
+  "name": "disi-backend",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.1.1",
+    "@elysiajs/swagger": "^1.1.1",
+    "elysia": "latest",
+    "puppeteer": "^23.4.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.ts"
+}

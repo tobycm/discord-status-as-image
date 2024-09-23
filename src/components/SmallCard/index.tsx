@@ -19,10 +19,18 @@ const SmallCard = () => {
   const [createdDate, setCreatedDate] = useState(params.get('createdDate'));
   const [statusImage, setStatusImage] = useState(setStatusImg(status || 'offline'));
   const [activity, setActivity] = useState<ActivityType | null>(
-    localStorage.getItem('activity') ? JSON.parse(localStorage.getItem('activity')!) : null
+    localStorage.getItem('activity')
+      ? JSON.parse(localStorage.getItem('activity')!)
+      : params.get('withActivity')
+        ? JSON.stringify(params.get('withActivity'))
+        : null
   );
   const [mood, setMood] = useState<MoodType | null>(
-    localStorage.getItem('mood') ? JSON.parse(localStorage.getItem('mood')!) : null
+    localStorage.getItem('mood')
+      ? JSON.parse(localStorage.getItem('mood')!)
+      : params.get('withMood')
+        ? JSON.stringify(params.get('withMood'))
+        : null
   );
 
   const id = params.get('id');
