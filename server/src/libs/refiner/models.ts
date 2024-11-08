@@ -63,7 +63,7 @@ export type RefinerUser = {
   username: string;
   display_name: string;
   avatar: string;
-  status: string;
+  status: 'online' | 'offline' | 'idle' | 'dnd';
   banner: string | null;
   accent_color: string | null;
   created_at: string;

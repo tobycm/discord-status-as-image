@@ -197,10 +197,5 @@ export const getPlayingTimestamp = (timestamps: { start: number }) => {
 export const getImageURLfromCDN = (appID: string, imageID: string) =>
   `https://cdn.discordapp.com/app-assets/${appID}/${imageID}.png`;
 
-export const getEmojiURLfromCDN = (emoji: EmojiType) => {
-  const { id, animated } = emoji;
-
-  return animated
-    ? `https://cdn.discordapp.com/emojis/${id}.gif`
-    : `https://cdn.discordapp.com/emojis/${id}.png`;
-};
+export const getEmojiURLfromCDN = (emoji: EmojiType) =>
+  `https://cdn.discordapp.com/emojis/${emoji.id}.${emoji.animated ? 'gif' : 'png'}`;

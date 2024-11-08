@@ -5,8 +5,6 @@ import { smallCard } from './controllers/smallCard';
 
 const origin = import.meta.env.CORS_ORIGIN || '*';
 
-const refinerEndpoint = import.meta.env.REFINER_API_URL || 'http://localhost:7000';
-
 const app = new Elysia()
   .use(swagger({ autoDarkMode: true }))
   .use(
